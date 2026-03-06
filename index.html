@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -21,7 +22,7 @@
 
     .page {
       width: 100%;
-      max-width: 500px;
+      max-width: 1050px;
       background-color: #f0f0f0;
       min-height: 100vh;
       padding: 12px 5px 60px 5px;
@@ -32,15 +33,15 @@
 
     /* HEADER — kotak rounded penuh, terpisah dari card */
     .header-box {
-      background-color: #1b2044;
+      background-color: #0f1120;
       color: #ffffff;
       text-align: center;
-      padding: 18px 20px;
+      padding: 12px 20px;
       font-size: 22px;
       font-weight: 400;
       letter-spacing: 0.3px;
       border-radius: 14px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
     }
 
     /* CARD data — terpisah dari header */
@@ -48,43 +49,61 @@
       background-color: #ffffff;
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
     }
 
-    /* Setiap baris */
     .detail-row {
-      display: flex;
-      align-items: center;
-      padding: 26px 24px;
-      border-bottom: 1px solid #e0e0e0;
-    }
+  display: flex;
+  padding: 26px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  gap: 16px;
+}
 
-    .detail-row:last-child {
-      border-bottom: none;
-    }
+.detail-row:last-child {
+  border-bottom: none;
+}
 
-    .label {
-      flex: 0 0 180px;
-      font-weight: 700;
-      font-size: 15px;
-      color: #1a1a2e;
-      line-height: 1.4;
-    }
+/* PC: label lebar, value menjauh ke kanan */
+.label {
+  flex: 0 0 450px;
+  font-weight: 700;
+  font-size: 15px;
+  color: #1a1a2e;
+  line-height: 1.4;
+}
 
-    .value {
-      flex: 1;
-      font-size: 15px;
-      font-weight: 400;
-      color: #3a3a3a;
-      line-height: 1.4;
-      word-break: break-word;
-    }
+.value {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 400;
+  color: #3a3a3a;
+  line-height: 1.4;
+  word-break: break-word;
+}
 
-    .value.aktif {
-      color: #1a6fd4;
-    }
+.value.aktif {
+  color: #1a6fd4;
+}
+
+/* Mobile: label lebih sempit, value langsung di sebelahnya */
+@media (max-width: 600px) {
+  .detail-row {
+    padding: 26px 26px;
+    gap: 8px;
+  }
+
+  .label {
+    flex: 0 0 140px;
+    font-size: 13px;
+  }
+
+  .value {
+    font-size: 13px;
+  }
+}
   </style>
 </head>
+
 <body>
   <div class="page">
 
@@ -96,7 +115,7 @@
 
       <div class="detail-row">
         <div class="label">Nomor Izin</div>
-        <div class="value"> 04.PI-92..26.0165</div>
+        <div class="value"> 04.PI-55.26.0165</div>
       </div>
 
       <div class="detail-row">
@@ -142,4 +161,5 @@
     </div>
   </div>
 </body>
+
 </html>
